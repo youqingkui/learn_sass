@@ -1,0 +1,12 @@
+@mixin alert($text-color, $background)
+  color: $text-color
+  background: $background
+  a
+    color: darken($text-color, 10%)
+
+
+.alert
+  @include alert(#000, #111)
+
+.alert-info
+  @include alert($background:#111, $text-color:#000)
